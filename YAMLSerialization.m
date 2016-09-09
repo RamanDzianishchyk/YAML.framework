@@ -179,6 +179,7 @@ __YAMLSerializationObjectWithYAMLDocument (yaml_document_t *document, YAMLReadOp
 
         // TODO: Check if aliases to previous documents are allowed by the specs
         yaml_document_delete(&document);
+        done = !yaml_document_get_root_node(&document);
     }
 
     yaml_parser_delete(&parser);
